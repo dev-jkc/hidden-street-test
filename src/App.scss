@@ -1,0 +1,267 @@
+@charset "utf-8";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/*#region*/// color guide
+
+// main color
+$main-primary: #FAA61A;
+$main-primary_pale: #825E20;
+$main-secondary: #FDD10D;
+$main-secondary_pale: #84711A;
+
+// sub color
+$sub-warrior: #ED4245;
+$sub-archer: #CBED42;
+$sub-mage: #42A5ED;
+$sub-theif: #8D42ED;
+$sub-priate_STR: #ED429E;
+$sub-priate_DEX: #42EDBA;
+
+// bg color 
+$bg-primary: #202225;
+$bg-secondary: #2F3136;
+$bg-content: #7F8082;
+
+// figure color
+$fig-primary: #FDFDFD;
+$fig-secondary: #8E9297;
+$fig-disable: #636568;
+$fig-black: #333333;
+
+// separate color
+$separate: #42454A;
+
+// feedback color
+$feedback-critical: #FD0D0D;
+$feedback-positive: #00B032;
+/*#endregion*/
+
+/*#region*/// typography
+
+$font-kr: "NanumSquare";
+
+$typo-size-map: (
+    "display-large": 57px,
+    "display-medium": 45px,
+    "display-small": 36px,
+
+    "headline-large": 32px,
+    "headline-medium": 28px,
+    "headline-small": 24px,
+
+    "title-large": 22px,
+    "title-medium": 16px,
+    "title-small": 14px,
+
+    "label-large": 14px,
+    "label-medium": 12px,
+    "label-small": 11px,
+
+    "body-large": 16px,
+    "body-medium": 14px,
+    "body-small": 12px
+);
+
+@function typo-size($name) {
+    @return map-get($typo-size-map, $name);
+}
+  
+@mixin typo-size($name) {
+    font-size: typo-size($name);
+}
+
+$typo-line-height-map: (
+    "display-large": 64px,
+    "display-medium": 52px,
+    "display-small": 44px,
+
+    "headline-large": 40px,
+    "headline-medium": 36px,
+    "headline-small": 32px,
+
+    "title-large": 28px,
+    "title-medium": 24px,
+    "title-small": 20px,
+
+    "label-large": 20px,
+    "label-medium": 16px,
+    "label-small": 16px,
+
+    "body-large": 24px,
+    "body-medium": 20px,
+    "body-small": 16px
+);
+
+@function typo-line-height($name) {
+    @return map-get($typo-line-height-map, $name);
+}
+  
+@mixin typo-line-height($name) {
+    line-height: typo-line-height($name);
+}
+
+$typo-font-weight-map: (
+    "display-large": 300,
+    "display-medium": 300,
+    "display-small": 300,
+
+    "headline-large": 300,
+    "headline-medium": 300,
+    "headline-small": 300,
+
+    "title-large": 600,
+    "title-medium": 600,
+    "title-small": 600,
+
+    "label-large": 600,
+    "label-medium": 600,
+    "label-small": 600,
+
+    "body-large": 300,
+    "body-medium": 300,
+    "body-small": 300
+);
+
+@function typo-font-weight($name) {
+    @return map-get($typo-font-weight-map, $name);
+}
+  
+@mixin typo-font-weight($name) {
+    font-weight: typo-font-weight($name);
+}
+
+// display
+@mixin display-large {
+    @include typo-size('display-large');
+    @include typo-line-height('display-large');
+}
+@mixin display-medium {
+    @include typo-size('display-medium');
+    @include typo-line-height('display-medium');
+}
+@mixin display-small {
+    @include typo-size('display-small');
+    @include typo-line-height('display-small');
+}
+
+// headline
+@mixin headline-large {
+    @include typo-size('headline-large');
+    @include typo-line-height('headline-large');
+}
+@mixin headline-medium {
+    @include typo-size('headline-medium');
+    @include typo-line-height('headline-medium');
+}
+@mixin headline-small {
+    @include typo-size('headline-small');
+    @include typo-line-height('headline-small');
+}
+
+// title
+@mixin title-large {
+    @include typo-size('title-large');
+    @include typo-line-height('title-large');
+}
+@mixin title-medium {
+    @include typo-size('title-medium');
+    @include typo-line-height('title-medium');
+}
+@mixin title-small {
+    @include typo-size('title-small');
+    @include typo-line-height('title-small');
+}
+
+// label
+@mixin label-large {
+    @include typo-size('label-large');
+    @include typo-line-height('label-large');
+}
+@mixin label-medium {
+    @include typo-size('label-medium');
+    @include typo-line-height('label-medium');
+}
+@mixin label-small {
+    @include typo-size('label-small');
+    @include typo-line-height('label-small');
+}
+
+// body
+@mixin body-large {
+    @include typo-size('body-large');
+    @include typo-line-height('body-large');
+}
+@mixin body-medium {
+    @include typo-size('body-medium');
+    @include typo-line-height('body-medium');
+}
+@mixin body-small {
+    @include typo-size('body-small');
+    @include typo-line-height('body-small');
+}
+/*#endregion*/
+
+body {
+    background-color: $bg_primary;
+    font-family: $font-kr;
+}
+
+// ver: SP or all
+.header {
+    background-color: $bg-secondary;
+    display: flex;
+}
+
+.header-btn {
+    display: none;
+}
+
+.container-header-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 56px 0px 0px;
+}
+
+.header-logo {
+    height: 20px;
+}
+
+.header-hamburger {
+    padding: 16px;
+}
+
+
+// ver: TB > disable
+// @media (min-width: 768px) {
+// }
+
+// ver: PC
+@media (min-width: 1024px) {
+    .header {
+        padding: 24px 32px;
+    }
+
+    .header-btn {
+        display: inline;
+        color: $main-primary;
+        background-color: transparent;
+        border: transparent;
+        padding: 12px 16px;
+        @include title-medium;
+    }
+
+    .container-header-logo {
+        display: inline;
+    }
+
+    .header-logo {
+        height: 48px;
+    }
+
+    .header-hamburger {
+        display: none;
+    }
+}
