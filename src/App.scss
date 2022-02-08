@@ -20,7 +20,7 @@ $sub-priate_DEX: #42EDBA;
 // bg color 
 $bg-primary: #202225;
 $bg-secondary: #2F3136;
-$bg-content: #7F8082;
+$bg-content: #36393F;
 
 // figure color
 $fig-primary: #FDFDFD;
@@ -201,15 +201,33 @@ $typo-font-weight-map: (
 }
 /*#endregion*/
 
+#root {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
 body {
-    background-color: $bg_primary;
+    background-color: $bg-primary;
     font-family: $font-kr;
 }
 
-// ver: SP or all
-.header {
-    background-color: $bg-secondary;
+.App {
     display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+// ver: SP or all
+// header start
+.header {
+    width: 100%;
+    background-color: $bg-secondary;
+    margin-bottom: 32px;
+    display: flex;
+    position: fixed;
+    top: 0; left: 0;
 }
 
 .header-btn {
@@ -233,6 +251,71 @@ body {
     padding: 16px;
 }
 
+// main-contents start
+.main-contents {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1170px;
+    padding-top: 88px;
+    padding-bottom: 112px;
+}
+
+.container-card {
+    padding: 0px 16px;
+}
+
+.card-top {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.card-top:active {
+    opacity: .5;
+}
+
+.card-top-img {
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.card-top-title {
+    padding: 16px 24px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: $bg-content;
+    @include title-medium;
+    color: $fig-primary;
+
+    // 3줄 이상 넘어가면 생략되게 설정
+    p {
+        display:-webkit-box;
+        height: 72px;
+        white-space: normal;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .card-top-button {
+        color: $main-primary;
+        display: none;
+        margin-top: 8px;
+    }
+}
+
+// footer start
+.footer {
+    width: 100%;
+    height: 48px;
+    padding: 16px;
+    margin-top: 40px;
+    @include body-small;
+    color: $fig-secondary;
+    border-top: 1px solid $separate;
+
+	bottom: 0px;
+	position: absolute;
+}
 
 // ver: TB > disable
 // @media (min-width: 768px) {
@@ -240,8 +323,10 @@ body {
 
 // ver: PC
 @media (min-width: 1024px) {
+    // header start
     .header {
         padding: 24px 32px;
+        margin-bottom: 48px;
     }
 
     .header-btn {
@@ -263,5 +348,33 @@ body {
 
     .header-hamburger {
         display: none;
+    }
+
+    // main-contents start
+    .main-contents {
+        padding-top: 144px;
+        padding-bottom: 192px;
+    }
+
+    .container-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 32px;
+        row-gap: 32px;
+    }
+
+    .card-top {
+        margin-bottom: 0px;
+    }
+    
+    .card-top:hover {
+        opacity: .5;
+    }
+
+    .card-top-title {
+        .card-top-button {
+            display: flex;
+            justify-content: right;
+        }
     }
 }
