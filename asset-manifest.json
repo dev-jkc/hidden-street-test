@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hidden-street/static/css/main.065d8d87.css",
+    "main.js": "/hidden-street/static/js/main.09826e27.js",
+    "static/js/787.a36e7e43.chunk.js": "/hidden-street/static/js/787.a36e7e43.chunk.js",
+    "index.html": "/hidden-street/index.html",
+    "main.065d8d87.css.map": "/hidden-street/static/css/main.065d8d87.css.map",
+    "main.09826e27.js.map": "/hidden-street/static/js/main.09826e27.js.map",
+    "787.a36e7e43.chunk.js.map": "/hidden-street/static/js/787.a36e7e43.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.065d8d87.css",
+    "static/js/main.09826e27.js"
+  ]
+}
