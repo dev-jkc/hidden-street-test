@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/hidden-street/static/css/main.065d8d87.css",
-    "main.js": "/hidden-street/static/js/main.09826e27.js",
+    "main.css": "/hidden-street/static/css/main.9c9ac7d6.css",
+    "main.js": "/hidden-street/static/js/main.e8e1cdf3.js",
     "static/js/787.a36e7e43.chunk.js": "/hidden-street/static/js/787.a36e7e43.chunk.js",
+    "static/media/thumbnail_market.png": "/hidden-street/static/media/thumbnail_market.ddc97c086cc348d7a8ac.png",
+    "static/media/logo_main.svg": "/hidden-street/static/media/logo_main.3b0837adb23c7a7b0d2fd22ecf517777.svg",
     "index.html": "/hidden-street/index.html",
-    "main.065d8d87.css.map": "/hidden-street/static/css/main.065d8d87.css.map",
-    "main.09826e27.js.map": "/hidden-street/static/js/main.09826e27.js.map",
+    "static/media/cancel.svg": "/hidden-street/static/media/cancel.c661687612562b7b98c448112c057f47.svg",
+    "static/media/hamburger.svg": "/hidden-street/static/media/hamburger.0561be13c2ffa9cc135ccefc0c745576.svg",
+    "main.9c9ac7d6.css.map": "/hidden-street/static/css/main.9c9ac7d6.css.map",
+    "main.e8e1cdf3.js.map": "/hidden-street/static/js/main.e8e1cdf3.js.map",
     "787.a36e7e43.chunk.js.map": "/hidden-street/static/js/787.a36e7e43.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.065d8d87.css",
-    "static/js/main.09826e27.js"
+    "static/css/main.9c9ac7d6.css",
+    "static/js/main.e8e1cdf3.js"
   ]
 }
