@@ -1,6 +1,6 @@
 {
-  "homepage": "http://dev-jkc.github.io/hidden-street",
-  "name": "hidden-street",
+  "homepage": "http://dev-jkc.github.io/hidden-street-test",
+  "name": "hidden-street-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
